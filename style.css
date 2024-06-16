@@ -58,10 +58,10 @@ body {
   padding: 0 3.2rem;
   margin: 0 auto;
 }
-/* .grid {
+.grid {
   display: grid;
-  gap: 9.6rem; */
-/* }
+  gap: 9.6rem;
+}
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
@@ -73,7 +73,7 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
-} */
+}
 
 .heading-primary,
 .heading-secondary {
@@ -153,6 +153,7 @@ body {
 
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 .logo {
   height: 2.2rem;
@@ -162,11 +163,24 @@ body {
 
 /*********************************/
 
+/**STICKY NAVIGATION**/
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  padding-top: 0;
+  width: 100%;
+  background-color: rgb(250, 191, 82);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(255, 259, 255, 0.97);
+}
+
 .main-nav-list {
   list-style: none;
   align-items: center;
   display: flex;
-  gap: 4.2rem;
+  gap: 4.8rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -194,7 +208,26 @@ body {
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
-/*********************************/
+
+/*********MOBILE**********/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/*******************************/
 /*HERO SECTION*/
 
 /*********************************/
@@ -509,6 +542,11 @@ body {
 .meal-attribute {
   font-size: 1.8rem;
 }
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
 
 .meal-img {
   width: 100%;
@@ -764,7 +802,7 @@ CTA-SECTION
   grid-template-columns: 2fr 1fr;
   background-color: #e67e22;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  height: 50rem;
+  height: 5 0rem;
   border-radius: 11px;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
